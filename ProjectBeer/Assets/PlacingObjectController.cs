@@ -20,16 +20,17 @@ public class PlacingObjectController : MonoBehaviour
             Touch t = Input.GetTouch(0);
             if (t.phase == TouchPhase.Ended)
             {
-                if(placedObjects < 2)
+                if(placedObjects < 1)
                 {
-                    Debug.Log(placedObjects);
                     placedObjects++;
                     placeObject(t.position);
 
+                } else
+                {
                 }
             }
 
-			GameObject.Find ("UI").SetActive ();
+			
         }
     }
 
