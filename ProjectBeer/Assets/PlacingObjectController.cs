@@ -28,6 +28,8 @@ public class PlacingObjectController : MonoBehaviour
 
                 }
             }
+
+			GameObject.Find ("UI").SetActive ();
         }
     }
 
