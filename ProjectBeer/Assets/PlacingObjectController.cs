@@ -5,6 +5,7 @@ public class PlacingObjectController : MonoBehaviour
 {
     public GameObject m_object;
     private TangoPointCloud m_pointCloud;
+    private int placedObjects = 0;
 
     void Start()
     {
@@ -19,7 +20,13 @@ public class PlacingObjectController : MonoBehaviour
             Touch t = Input.GetTouch(0);
             if (t.phase == TouchPhase.Ended)
             {
-                placeObject(t.position);
+                if(placedObjects < 2)
+                {
+                    Debug.Log(placedObjects);
+                    placedObjects++;
+                    placeObject(t.position);
+
+                }
             }
         }
     }
