@@ -24,10 +24,9 @@ public class PlacingObjectController : MonoBehaviour
                 {
                     placedObjects++;
                     placeObject(t.position);
+                    GameObject.Find("UI").SetActive(true);
 
-                } else
-                {
-                }
+                } 
             }
 
 			
