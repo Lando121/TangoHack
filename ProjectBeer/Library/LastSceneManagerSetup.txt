@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/TangoSDK/Examples/Scenes/MainBalls.unity
-  isLoaded: 1
-  isActive: 1
