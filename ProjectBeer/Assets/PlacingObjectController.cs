@@ -6,6 +6,8 @@ public class PlacingObjectController : MonoBehaviour
     public GameObject m_object;
     private TangoPointCloud m_pointCloud;
     private int placedObjects = 0;
+	public GameObject m_laser;
+	public GameObject canvas;
 
     void Start()
     {
@@ -24,11 +26,16 @@ public class PlacingObjectController : MonoBehaviour
                 {
                     placedObjects++;
                     placeObject(t.position);
-                    GameObject.Find("Canvas").SetActive(true);
+                    canvas.SetActive(true);
                 } 
-            }
 
-			
+				if (canvas.activeSelf) {
+					Instantiate (m_laser);
+					m_laser.transform.position = Camera.main.transform.position;
+
+				}
+					
+            }
         }
     }
 
@@ -49,7 +56,5 @@ public class PlacingObjectController : MonoBehaviour
             Vector3 right = Vector3.Cross(plane.normal, cam.transform.forward).normalized;
             Vector3 forward = Vector3.Cross(right, plane.normal).normalized;
             Instantiate(m_object, planeCenter, Quaternion.LookRotation(forward, up));
-        
-      
     }
 }

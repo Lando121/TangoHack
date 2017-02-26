@@ -38,7 +38,7 @@ GameObject:
   - component: {fileID: 4915378651291752}
   - component: {fileID: 114132338068040712}
   m_Layer: 0
-  m_Name: Prefab_hole
+  m_Name: Prefab_Hole
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
